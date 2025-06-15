@@ -48,8 +48,6 @@ export const GoldPagination = ({
   totalPages,
   onPageChange,
 }: GoldPaginationProps) => {
-  if (totalPages <= 1) return null;
-
   const pages = usePageNumbers(currentPage, totalPages);
 
   const handlePrevious = useCallback(() => {
@@ -68,6 +66,10 @@ export const GoldPagination = ({
     },
     [currentPage, onPageChange]
   );
+
+  if (totalPages <= 1) {
+    return null;
+  }
 
   return (
     <Pagination className="flex items-center justify-center space-x-2">
