@@ -3,7 +3,7 @@
 
 export async function fetchGolds() {
   try {
-    const response = await fetch("http://127.0.0.1:8000/gold_prices/", {
+    const response = await fetch("http://157.245.157.23:3000/gold_prices/", {
       method: "GET", // atau POST, tergantung API-nya
     });
 
